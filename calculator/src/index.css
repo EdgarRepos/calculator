@@ -1,0 +1,35 @@
+body {
+  margin: 10% 20%;
+  font-size: 24px;
+}
+
+#calculator {
+  width: 280px;
+  height: 360px;
+  border: 2px solid black;
+}
+
+#calculator .display-container {
+  text-align: right;
+}
+
+#calculator .row {
+  height: 58px;
+  border: 1px solid black;
+}
+
+#calculator .four-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+#calculator .two-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+#calculator .row .operands, #calculator .row .operators {
+  text-align: center;
+  border: 1px solid black;
+  width: 100%
+}

@@ -1,21 +1,42 @@
 body {
   margin: 10% 20%;
   font-size: 24px;
+  color: floralwhite;
 }
 
 #calculator {
   width: 280px;
-  height: 360px;
+  height: 372px;
   border: 2px solid black;
+  border-radius: 3%;
+  background: #3C342A;
+  padding: 4px
 }
 
 #calculator .display-container {
+  font-size: 34px;
   text-align: right;
+  padding-top: 12px;
+  padding-right: 10px;
+  overflow: hidden;
 }
 
 #calculator .row {
   height: 58px;
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#calculator .top {
+  height: 58px;
+  border-top: none;
+  border-bottom: 1px solid black;
+}
+
+#calculator .bottom {
+  height: 58px;
+  border-top: 1px solid black;
+  border-bottom: none;
 }
 
 #calculator .four-columns {
@@ -23,13 +44,43 @@ body {
   justify-content: space-around;
 }
 
-#calculator .two-columns {
+#calculator .four-columns .operands, #calculator .four-columns .operators {
+  padding-top: 10px;
+}
+
+#calculator .three-columns {
   display: flex;
   justify-content: space-around;
 }
 
+#calculator .three-columns .operands, #calculator .three-columns .operators {
+  padding-top: 10px;
+}
+
 #calculator .row .operands, #calculator .row .operators {
   text-align: center;
-  border: 1px solid black;
-  width: 100%
+  border-left: 1px solid black;
+  width: 100%;
+}
+
+#calculator .row .operands:hover, #calculator .row .operators:hover{
+  text-align: center;
+  width: 100%;
+  background-color: gainsboro
+}
+
+#calculator .row .memory {
+  background-color: #544D44;
+}
+
+#calculator .row .numbers {
+  background-color: #8F8477;
+}
+
+#calculator .row .symbols {
+  background-color: #DF7917;
+}
+
+#calculator .row .equal {
+  background-color: #834E1C;
 }

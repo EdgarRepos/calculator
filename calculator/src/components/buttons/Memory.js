@@ -12,8 +12,8 @@ function Memory(props) {
   }
 
   return (
-    <div className="operators">
-      <span onClick={handleOperatorClick} name={props.operand}>{props.operator}</span>
+    <div className="box operators memory" onClick={handleOperatorClick}>
+      <span>{props.operator}</span>
     </div>
   )
 }

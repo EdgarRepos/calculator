@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 function EqualSymbol(props) {
   const dispatch = useDispatch();
 
-  function handleOperatorClick() {
+  function handleOperatorClick(e) {
     dispatch({
       type: "@calculate/equal",
       isEqualSymbol: true
@@ -12,8 +12,8 @@ function EqualSymbol(props) {
   }
 
   return (
-    <div className="operators">
-      <span onClick={handleOperatorClick} name={props.operand}>{props.operator}</span>
+    <div className="box operators equal" onClick={handleOperatorClick} data-test="equalSymbol">
+      <span>{props.operator}</span>
     </div>
   )
 }

@@ -57,7 +57,7 @@ export const resultReducer = (state = {
           isEqualSymbol: false
         }
       }
-      if (state.operator && !state.previousNumber) {
+      if (state.operator && !state.currentNumber) {
         return {
           ...state,
           operator: action.operator
@@ -71,19 +71,11 @@ export const resultReducer = (state = {
           operator: action.operator
         }
       }
-      if (state.currentNumber && state.previousNumber) {
-        return {
-          ...state,
-          total: mathOperation(state.previousNumber, state.currentNumber, state.operator),
-          previousNumber: String(mathOperation(state.previousNumber, state.currentNumber, state.operator)),
-          currentNumber: null,
-          operator: action.operator
-        }
-      }
       return {
         ...state,
-        previousNumber: state.currentNumber,
-        currentNumber: "0",
+        total: mathOperation(state.previousNumber, state.currentNumber, state.operator),
+        previousNumber: String(mathOperation(state.previousNumber, state.currentNumber, state.operator)),
+        currentNumber: null,
         operator: action.operator
       }
       

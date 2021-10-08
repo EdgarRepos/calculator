@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 function Operators(props) {
   const dispatch = useDispatch();
 
-  function handleOperatorClick(e) {
+  function handleOperatorClick() {
     dispatch({
       type: "@calculate/operator",
       operator: props.operator
@@ -12,8 +12,8 @@ function Operators(props) {
   }
 
   return (
-    <div className="operators">
-      <span onClick={() => handleOperatorClick()}>{props.operator}</span>
+    <div className="box operators symbols" onClick={handleOperatorClick}>
+      <span>{props.operator}</span>
     </div>
   )
 }

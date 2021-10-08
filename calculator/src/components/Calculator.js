@@ -1,18 +1,15 @@
 import React from "react";
+import Display from "./Display";
 import Operands from "./buttons/Operands";
 import Operators from "./buttons/Operators";
 import EqualSymbol from "./buttons/EqualSymbol";
 import Memory from "./buttons/Memory";
-import { useSelector } from "react-redux";
 
 function Calculator() {
-  const state = useSelector((state) => state);
 
   return (
     <div id="calculator">
-      <div className="row display-container">
-        <span>{state && (state.currentNumber ? state.currentNumber : "0")}</span>
-      </div>
+      <Display />
       <div className="row four-columns">
         <Memory operator="C" />
         <Memory operator="M+" />
@@ -37,7 +34,7 @@ function Calculator() {
         <Operands operand="3" />
         <Operators operator="+" />
       </div>
-      <div className="row two-columns">
+      <div className="row three-columns bottom">
         <Operands operand="0" />
         <Memory operator="MR" />
         <EqualSymbol operator="=" />

@@ -12,8 +12,8 @@ function Operands(props) {
   }
 
   return (
-    <div className="operands">
-      <span onClick={handleOperandClick} name={props.operand}>{props.operand}</span>
+    <div className="box operands numbers" onClick={handleOperandClick}>
+      <span>{props.operand}</span>
     </div>
   )
 }
